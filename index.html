@@ -1,0 +1,17 @@
+<!-- datepicker-lib/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DatePicker Library Test</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./DatePicker.js"></script>
+  <script>
+    const datePicker = new DatePicker({ color: 'blue', fontSize: '16px' });
+    document.getElementById('app').innerHTML = datePicker.getHTML();
+  </script>
+</body>
+</html>
