@@ -1,6 +1,6 @@
 {
     "name": "date-picker-lib-all",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A description of your library",
     "main": "dist/DatePicker.ts",
     "types": "dist/DatePicker.d.ts",

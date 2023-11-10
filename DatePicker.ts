@@ -2,7 +2,7 @@
 export default class DatePicker {
     private options: any;
     private selectedDate: Date | null;
-    private datePickerHTML: string;
+    private datePickerHTML: string | undefined;
   
     constructor(options: any) {
       this.options = options;
@@ -38,7 +38,7 @@ export default class DatePicker {
     }
   
     public getHTML(): string {
-      return this.datePickerHTML;
+      return this.datePickerHTML || 'prazno';
     }
   }
   
