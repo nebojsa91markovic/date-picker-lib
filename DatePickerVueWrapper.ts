@@ -1,9 +1,11 @@
 // datepicker-lib/DatePickerVueWrapper.ts
+import { defineComponent, ref, watch, onMounted } from 'vue';
 import DatePicker from './DatePicker';
-import { Vue, CreateElement } from 'vue/types/vue';
 
-export default Vue.extend({
-  props: ['options'],
+export default defineComponent({
+  props: {
+    options: Object, // Adjust the type based on your DatePicker options
+  },
   data() {
     return {
       datePicker: null as DatePicker | null,
@@ -32,11 +34,7 @@ export default Vue.extend({
       }
     },
   },
-  render(createElement: CreateElement): any {
-    return createElement('div', {
-      domProps: {
-        innerHTML: this.datePickerHTML,
-      },
-    });
-  },
+  template: `
+    <div v-html="datePickerHTML"></div>
+  `,
 });

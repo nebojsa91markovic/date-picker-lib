@@ -1,20 +1,38 @@
-// datepicker-lib/date-picker.component.ts
-import { Component, Input, ElementRef, AfterViewInit } from '@angular/core';
-import DatePicker from './DatePicker';
+// datepicker-lib/src/app/date-picker/date-picker.component.ts
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import DatePicker  from './DatePicker';
 
 @Component({
   selector: 'app-date-picker',
-  template: '',
+  template: `
+    <div [innerHTML]="datePickerHTML"></div>
+  `,
 })
-export class DatePickerComponent implements AfterViewInit {
-  private datePicker: DatePicker;
+export class DatePickerComponent implements OnChanges {
+  @Input() options: any; // Adjust the type based on your DatePicker options
 
-  @Input() options: any; // Adjust the type based on your configuration options
+  private datePicker: DatePicker | null = null;
+  datePickerHTML: string = '';
 
-  constructor(private el: ElementRef) {}
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.options) {
+      this.updateDatePicker();
+    }
+  }
 
-  ngAfterViewInit() {
-    this.datePicker = new DatePicker(this.options);
-    this.el.nativeElement.innerHTML = this.datePicker.getHTML();
+  private updateDatePicker(): void {
+    if (!this.datePicker) {
+      this.datePicker = new DatePicker(this.options);
+      this.updateHTML();
+    } else {
+      this.datePicker.update(this.options);
+      this.updateHTML();
+    }
+  }
+
+  private updateHTML(): void {
+    if (this.datePicker) {
+      this.datePickerHTML = this.datePicker.getHTML();
+    }
   }
 }

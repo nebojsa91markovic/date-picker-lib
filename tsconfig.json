@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react", // Specify the JSX mode (react for React, preserve for Vue)
+    "declaration": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "types": ["react", "vue", "node"], // Add Vue types if using Vue
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue", // Include Vue files
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    // Add references to Angular projects or other TypeScript projects as needed
+  ]
+}

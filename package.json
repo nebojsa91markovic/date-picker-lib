@@ -1,0 +1,37 @@
+{
+    "name": "your-library-name",
+    "version": "1.0.0",
+    "description": "A description of your library",
+    "main": "dist/DatePicker.js",
+    "types": "dist/DatePicker.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc -p tsconfig.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "your-git-repo-url"
+    },
+    "keywords": [
+        "datepicker",
+        "vue",
+        "typescript"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "bugs": {
+        "url": "your-bug-tracking-url"
+    },
+    "homepage": "your-project-homepage-url",
+    "dependencies": {
+        "@angular/core": "^17.0.2",
+        "@vue/cli-service": "^5.0.8",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.37",
+        "@types/react-dom": "^18.2.15",
+        "@types/vue": "^2.0.0"
+    }
+}
