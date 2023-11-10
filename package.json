@@ -6,7 +6,7 @@
     "types": "dist/DatePicker.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsc -p tsconfig.json"
+        "build": "tsc --listFiles --diagnostics --extendedDiagnostics"
     },
     "repository": {
         "type": "git",
@@ -21,19 +21,17 @@
     ],
     "author": "Nebojsa Markovic",
     "license": "MIT",
-    "bugs": {
-        "url": "your-bug-tracking-url"
-    },
-    "homepage": "your-project-homepage-url",
     "dependencies": {
         "@angular/core": "^17.0.2",
         "@vue/cli-service": "^5.0.8",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "tsc": "^2.0.4"
     },
     "devDependencies": {
         "@types/react": "^18.2.37",
         "@types/react-dom": "^18.2.15",
-        "@types/vue": "^2.0.0"
+        "@types/vue": "^2.0.0",
+        "typescript": "^5.2.2"
     }
 }

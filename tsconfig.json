@@ -17,6 +17,12 @@
     "src/**/*.tsx",
     "src/**/*.vue", // Include Vue files
   ],
+  "files": [
+    "./DatePicker.ts",
+    "./date-picker.component.ts",
+    "./DatePickerReactWrapper.tsx",
+    "./DatePickerVueWrapper.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist"
