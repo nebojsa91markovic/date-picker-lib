@@ -1,8 +1,8 @@
 {
-    "name": "your-library-name",
+    "name": "date-picker-lib-all",
     "version": "1.0.0",
     "description": "A description of your library",
-    "main": "dist/DatePicker.js",
+    "main": "dist/DatePicker.ts",
     "types": "dist/DatePicker.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,16 @@
     },
     "repository": {
         "type": "git",
-        "url": "your-git-repo-url"
+        "url": "https://github.com/nebojsa91markovic/date-picker-lib"
     },
     "keywords": [
         "datepicker",
         "vue",
+        "react",
+        "angular",
         "typescript"
     ],
-    "author": "Your Name",
+    "author": "Nebojsa Markovic",
     "license": "MIT",
     "bugs": {
         "url": "your-bug-tracking-url"
